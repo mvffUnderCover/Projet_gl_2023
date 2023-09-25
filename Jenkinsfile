@@ -33,7 +33,7 @@ pipeline {
 
  stage("SonarQube Analysis") {
  steps {
- bat 'mvn sonar:sonar .Dsonar.host.url=$SONAR_URL'
+ bat 'mvn sonar:sonar -Dsonar.host.url=$SONAR_URL'
  }
  }
  stage('Approve Deployment') {
